@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JINSI | 个人简历</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script>
+tailwind.config={
+  theme:{
+    extend:{
+      colors:{
+        primary:'#2563eb',
+        dark:'#1e293b'
+      },
+      fontFamily:{
+        sans:['Inter','system-ui','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style type="text/tailwindcss">
+@layer utilities{
+  .text-shadow{text-shadow:0 1px 2px rgba(0,0,0,0.1)}
+  .section-fade{scroll-margin-top:80px}
+}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+<header class="fixed w-full bg-white/90 backdrop-blur shadow-sm z-50">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="text-xl font-bold text-primary">JINSI</a>
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#about" class="hover:text-primary transition-colors">关于我</a>
+      <a href="#education" class="hover:text-primary transition-colors">教育</a>
+      <a href="#experience" class="hover:text-primary transition-colors">经历</a>
+      <a href="#skills" class="hover:text-primary transition-colors">技能</a>
+      <a href="#contact" class="hover:text-primary transition-colors">联系</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden text-xl">
+      <i class="fa fa-bars"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <div class="px-4 py-2 flex flex-col space-y-3 text-sm">
+      <a href="#about" class="py-1">关于我</a>
+      <a href="#education" class="py-1">教育</a>
+      <a href="#experience" class="py-1">经历</a>
+      <a href="#skills" class="py-1">技能</a>
+      <a href="#contact" class="py-1">联系</a>
+    </div>
+  </div>
+</header>
+
+<section class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-primary/5 to-white">
+  <div class="max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
+    <div class="w-28 h-28 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+      <i class="fa fa-user text-4xl text-primary"></i>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-dark mb-2">JINSI</h1>
+    <p class="text-lg text-slate-600 mb-4">国际汉语教师志愿者 | 西班牙语B1 | 智利外派任教</p>
+    <p class="text-sm text-slate-500 max-w-xl">热爱跨文化交流，专注汉语教学与西语学习，擅长视频创作与数码设备运维</p>
+    <div class="mt-6 flex space-x-4">
+      <a href="#contact" class="px-5 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">联系我</a>
+      <a href="#experience" class="px-5 py-2 border border-slate-300 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">查看经历</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-16 section-fade">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8 flex items-center">
+      <span class="w-8 h-1 bg-primary mr-3"></span>关于我
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <p class="text-slate-600 leading-relaxed mb-4">2003年生，山西原平人，河北外国语学院毕业。现任国际汉语教师志愿者，外派智利康塞普西翁，拥有丰富的海外教学与跨文化沟通经验。</p>
+        <p class="text-slate-600 leading-relaxed">西班牙语B1水平，备考DELE B2；熟练操作影石、大疆等数码设备，擅长视频拍摄剪辑与设备维护；性格沉稳，适应力强，热爱生活与探索。</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+        <h3 class="font-semibold text-dark mb-4">基本信息</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center"><i class="fa fa-calendar text-primary mr-3 w-4"></i>2003年</li>
+          <li class="flex items-center"><i class="fa fa-map-marker text-primary mr-3 w-4"></i>山西原平 / 智利Bío-Bío</li>
+          <li class="flex items-center"><i class="fa fa-graduation-cap text-primary mr-3 w-4"></i>河北外国语学院</li>
+          <li class="flex items-center"><i class="fa fa-briefcase text-primary mr-3 w-4"></i>国际汉语教师志愿者</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="py-16 bg-white section-fade">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8 flex items-center">
+      <span class="w-8 h-1 bg-primary mr-3"></span>教育经历
+    </h2>
+    <div class="space-y-6">
+      <div class="p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+          <h3 class="font-semibold text-dark">河北外国语学院</h3>
+          <span class="text-xs text-slate-500 mt-1 md:mt-0">2020.09 – 2024.06</span>
+        </div>
+        <p class="text-sm text-primary mb-2">西班牙语专业 | 本科</p>
+        <p class="text-sm text-slate-600">系统学习西班牙语语言文学、翻译理论与实践、跨文化交际；专业基础扎实，具备良好的听说读写能力。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="py-16 section-fade">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8 flex items-center">
+      <span class="w-8 h-1 bg-primary mr-3"></span>工作经历
+    </h2>
+    <div class="space-y-6">
+      <div class="p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+          <h3 class="font-semibold text-dark">国际汉语教师志愿者（智利）</h3>
+          <span class="text-xs text-slate-500 mt-1 md:mt-0">2026.05 – 至今</span>
+        </div>
+        <p class="text-sm text-primary mb-2">智利康塞普西翁 | 外派任教</p>
+        <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+          <li>负责当地中小学/成人汉语课程教学，设计教学方案与文化活动</li>
+          <li>开展中国文化推广（节日、书法、剪纸等），促进中智文化交流</li>
+          <li>全西语工作环境，熟练运用西语进行教学沟通与日常交流</li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+          <h3 class="font-semibold text-dark">国际汉语教师志愿者（北京）</h3>
+          <span class="text-xs text-slate-500 mt-1 md:mt-0">2024.07 – 2026.04</span>
+        </div>
+        <p class="text-sm text-primary mb-2">北京丰台 | 汉语教学与培训</p>
+        <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+          <li>担任外籍学员汉语教师，教授HSK1-4级课程，提升汉语综合能力</li>
+          <li>编写教学课件与练习材料，优化教学方法，提高课堂效率</li>
+          <li>协助组织中外文化交流活动，增强跨文化理解与沟通</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="py-16 bg-white section-fade">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8 flex items-center">
+      <span class="w-8 h-1 bg-primary mr-3"></span>技能证书
+    </h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-5 rounded-xl border border-slate-200">
+        <h3 class="font-semibold text-dark mb-4">语言能力</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-center justify-between">
+            <span>汉语（母语）</span>
+            <div class="w-24 h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div class="h-full bg-primary w-full"></div>
+            </div>
+          </li>
+          <li class="flex items-center justify-between">
+            <span>西班牙语（B1）</span>
+            <div class="w-24 h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div class="h-full bg-primary w-3/4"></div>
+            </div>
+          </li>
+          <li class="flex items-center justify-between">
+            <span>英语（基础交流）</span>
+            <div class="w-24 h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div class="h-full bg-primary w-1/2"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-xl border border-slate-200">
+        <h3 class="font-semibold text-dark mb-4">专业技能</h3>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li><i class="fa fa-check text-primary mr-2"></i>汉语教学（HSK1-4）、教案设计、文化活动策划</li>
+          <li><i class="fa fa-check text-primary mr-2"></i>视频拍摄剪辑（影石Ace Pro 2、大疆Mic Mini）</li>
+          <li><i class="fa fa-check text-primary mr-2"></i>数码设备运维、电脑/手机系统优化与故障排查</li>
+          <li><i class="fa fa-check text-primary mr-2"></i>Office办公、文档排版、PPT制作</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 section-fade">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8 flex items-center">
+      <span class="w-8 h-1 bg-primary mr-3"></span>联系我
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+        <h3 class="font-semibold text-dark mb-4">联系方式</h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-center"><i class="fa fa-envelope text-primary mr-3 w-5"></i>your.email@example.com</li>
+          <li class="flex items-center"><i class="fa fa-wechat text-primary mr-3 w-5"></i>你的微信ID</li>
+          <li class="flex items-center"><i class="fa fa-phone text-primary mr-3 w-5"></i>+86 xxx xxxx xxxx</li>
+          <li class="flex items-center"><i class="fa fa-globe text-primary mr-3 w-5"></i>智利Bío-Bío康塞普西翁</li>
+        </ul>
+        <div class="mt-6 flex space-x-4">
+          <a href="#" class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold text-dark mb-4">发送消息</h3>
+        <form class="space-y-4">
+          <input type="text" placeholder="你的姓名" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
+          <input type="email" placeholder="你的邮箱" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
+          <textarea rows="4" placeholder="你的留言" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"></textarea>
+          <button type="submit" class="px-5 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">发送消息</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-8 bg-dark text-white text-center text-sm">
+  <p>© 2026 JINSI | 用 ❤️ 制作</p>
+  <p class="mt-2 text-slate-400">本网站采用HTML+CSS+JS开发，响应式设计，适配各种设备</p>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target=document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop-70,
+        behavior: 'smooth'
+      });
+      mobileMenu.classList.add('hidden');
+    }
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const header=document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('shadow');
+  } else {
+    header.classList.remove('shadow');
+  }
+});
+</script>
+</body>
+</html>
