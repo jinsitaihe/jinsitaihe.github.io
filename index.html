@@ -1,264 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>JINSI | 个人简历</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script>
-tailwind.config={
-  theme:{
-    extend:{
-      colors:{
-        primary:'#2563eb',
-        dark:'#1e293b'
-      },
-      fontFamily:{
-        sans:['Inter','system-ui','sans-serif']
-      }
-    }
-  }
-}
-</script>
-<style type="text/tailwindcss">
-@layer utilities{
-  .text-shadow{text-shadow:0 1px 2px rgba(0,0,0,0.1)}
-  .section-fade{scroll-margin-top:80px}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="裴锦涛的个人简历：国际中文教师志愿者，具有智利教学、新东方住宿班主任经历，求职意向为AI辅助资料整理、用户沟通与执行支持。">
+  <meta name="theme-color" content="#173c72">
+  <title>裴锦涛 JINSI｜个人简历</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
-<header class="fixed w-full bg-white/90 backdrop-blur shadow-sm z-50">
-  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="#" class="text-xl font-bold text-primary">JINSI</a>
-    <nav class="hidden md:flex space-x-6 text-sm font-medium">
-      <a href="#about" class="hover:text-primary transition-colors">关于我</a>
-      <a href="#education" class="hover:text-primary transition-colors">教育</a>
-      <a href="#experience" class="hover:text-primary transition-colors">经历</a>
-      <a href="#skills" class="hover:text-primary transition-colors">技能</a>
-      <a href="#contact" class="hover:text-primary transition-colors">联系</a>
+<body>
+  <a class="sr-only skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="裴锦涛，返回顶部">
+        <span class="brand-mark" aria-hidden="true">裴</span>
+        <span class="brand-text">裴锦涛<span class="brand-sub">JINSI · 个人简历</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a class="nav-link" href="#capabilities">可承担的工作</a>
+        <a class="nav-link" href="#experience">工作经历</a>
+        <a class="nav-link" href="#qingyuan">清源三问</a>
+        <a class="nav-link" href="#contact">联系</a>
+      </nav>
+      <div class="header-actions">
+        <button class="button button-quiet" id="print-resume" type="button">打印简历 <span aria-hidden="true">↗</span></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开导航"><span aria-hidden="true">☰</span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="手机导航" hidden>
+      <a class="nav-link" href="#capabilities">可承担的工作</a>
+      <a class="nav-link" href="#experience">工作经历</a>
+      <a class="nav-link" href="#qingyuan">清源三问</a>
+      <a class="nav-link" href="#contact">联系我</a>
     </nav>
-    <button id="menuBtn" class="md:hidden text-xl">
-      <i class="fa fa-bars"></i>
-    </button>
-  </div>
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-    <div class="px-4 py-2 flex flex-col space-y-3 text-sm">
-      <a href="#about" class="py-1">关于我</a>
-      <a href="#education" class="py-1">教育</a>
-      <a href="#experience" class="py-1">经历</a>
-      <a href="#skills" class="py-1">技能</a>
-      <a href="#contact" class="py-1">联系</a>
-    </div>
-  </div>
-</header>
+  </header>
 
-<section class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-primary/5 to-white">
-  <div class="max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
-    <div class="w-28 h-28 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-      <i class="fa fa-user text-4xl text-primary"></i>
-    </div>
-    <h1 class="text-3xl md:text-4xl font-bold text-dark mb-2">JINSI</h1>
-    <p class="text-lg text-slate-600 mb-4">国际汉语教师志愿者 | 西班牙语B1 | 智利外派任教</p>
-    <p class="text-sm text-slate-500 max-w-xl">热爱跨文化交流，专注汉语教学与西语学习，擅长视频创作与数码设备运维</p>
-    <div class="mt-6 flex space-x-4">
-      <a href="#contact" class="px-5 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">联系我</a>
-      <a href="#experience" class="px-5 py-2 border border-slate-300 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">查看经历</a>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="py-16 section-fade">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-8 flex items-center">
-      <span class="w-8 h-1 bg-primary mr-3"></span>关于我
-    </h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div>
-        <p class="text-slate-600 leading-relaxed mb-4">2003年生，山西原平人，河北外国语学院毕业。现任国际汉语教师志愿者，外派智利康塞普西翁，拥有丰富的海外教学与跨文化沟通经验。</p>
-        <p class="text-slate-600 leading-relaxed">西班牙语B1水平，备考DELE B2；熟练操作影石、大疆等数码设备，擅长视频拍摄剪辑与设备维护；性格沉稳，适应力强，热爱生活与探索。</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-        <h3 class="font-semibold text-dark mb-4">基本信息</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-center"><i class="fa fa-calendar text-primary mr-3 w-4"></i>2003年</li>
-          <li class="flex items-center"><i class="fa fa-map-marker text-primary mr-3 w-4"></i>山西原平 / 智利Bío-Bío</li>
-          <li class="flex items-center"><i class="fa fa-graduation-cap text-primary mr-3 w-4"></i>河北外国语学院</li>
-          <li class="flex items-center"><i class="fa fa-briefcase text-primary mr-3 w-4"></i>国际汉语教师志愿者</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="py-16 bg-white section-fade">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-8 flex items-center">
-      <span class="w-8 h-1 bg-primary mr-3"></span>教育经历
-    </h2>
-    <div class="space-y-6">
-      <div class="p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-          <h3 class="font-semibold text-dark">河北外国语学院</h3>
-          <span class="text-xs text-slate-500 mt-1 md:mt-0">2020.09 – 2024.06</span>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="name">
+      <div class="hero-main">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> 清源定向求职 · 当前在智利任教</p>
+        <div class="profile-heading">
+          <img class="portrait" src="assets/portrait.png" width="96" height="128" alt="裴锦涛证件照">
+          <div><h1 class="name" id="name">裴锦涛<span lang="en"> JINSI</span></h1><p class="availability">计划2027年3月到岗</p></div>
         </div>
-        <p class="text-sm text-primary mb-2">西班牙语专业 | 本科</p>
-        <p class="text-sm text-slate-600">系统学习西班牙语语言文学、翻译理论与实践、跨文化交际；专业基础扎实，具备良好的听说读写能力。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience" class="py-16 section-fade">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-8 flex items-center">
-      <span class="w-8 h-1 bg-primary mr-3"></span>工作经历
-    </h2>
-    <div class="space-y-6">
-      <div class="p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-          <h3 class="font-semibold text-dark">国际汉语教师志愿者（智利）</h3>
-          <span class="text-xs text-slate-500 mt-1 md:mt-0">2026.05 – 至今</span>
+        <p class="hero-role">AI辅助资料整理<br>沟通与执行支持</p>
+        <p class="hero-intro">自2025年起在智利生活、任教，使用AI辅助准备课件、整理素材和复盘教学；有新东方住宿班主任经历。希望从内容整理、用户沟通及执行支持等具体工作参与清源业务，并根据业务需要配合团队工作安排。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#experience">查看工作经历 <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="mailto:pj20211105@163.com">邮件联系 <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="resume.html">简洁投递版 <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="text-sm text-primary mb-2">智利康塞普西翁 | 外派任教</p>
-        <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
-          <li>负责当地中小学/成人汉语课程教学，设计教学方案与文化活动</li>
-          <li>开展中国文化推广（节日、书法、剪纸等），促进中智文化交流</li>
-          <li>全西语工作环境，熟练运用西语进行教学沟通与日常交流</li>
-        </ul>
-      </div>
-      <div class="p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-          <h3 class="font-semibold text-dark">国际汉语教师志愿者（北京）</h3>
-          <span class="text-xs text-slate-500 mt-1 md:mt-0">2024.07 – 2026.04</span>
-        </div>
-        <p class="text-sm text-primary mb-2">北京丰台 | 汉语教学与培训</p>
-        <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
-          <li>担任外籍学员汉语教师，教授HSK1-4级课程，提升汉语综合能力</li>
-          <li>编写教学课件与练习材料，优化教学方法，提高课堂效率</li>
-          <li>协助组织中外文化交流活动，增强跨文化理解与沟通</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="py-16 bg-white section-fade">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-8 flex items-center">
-      <span class="w-8 h-1 bg-primary mr-3"></span>技能证书
-    </h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-5 rounded-xl border border-slate-200">
-        <h3 class="font-semibold text-dark mb-4">语言能力</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-center justify-between">
-            <span>汉语（母语）</span>
-            <div class="w-24 h-2 bg-slate-200 rounded-full overflow-hidden">
-              <div class="h-full bg-primary w-full"></div>
-            </div>
-          </li>
-          <li class="flex items-center justify-between">
-            <span>西班牙语（B1）</span>
-            <div class="w-24 h-2 bg-slate-200 rounded-full overflow-hidden">
-              <div class="h-full bg-primary w-3/4"></div>
-            </div>
-          </li>
-          <li class="flex items-center justify-between">
-            <span>英语（基础交流）</span>
-            <div class="w-24 h-2 bg-slate-200 rounded-full overflow-hidden">
-              <div class="h-full bg-primary w-1/2"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="p-5 rounded-xl border border-slate-200">
-        <h3 class="font-semibold text-dark mb-4">专业技能</h3>
-        <ul class="space-y-2 text-sm text-slate-600">
-          <li><i class="fa fa-check text-primary mr-2"></i>汉语教学（HSK1-4）、教案设计、文化活动策划</li>
-          <li><i class="fa fa-check text-primary mr-2"></i>视频拍摄剪辑（影石Ace Pro 2、大疆Mic Mini）</li>
-          <li><i class="fa fa-check text-primary mr-2"></i>数码设备运维、电脑/手机系统优化与故障排查</li>
-          <li><i class="fa fa-check text-primary mr-2"></i>Office办公、文档排版、PPT制作</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="py-16 section-fade">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-8 flex items-center">
-      <span class="w-8 h-1 bg-primary mr-3"></span>联系我
-    </h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-        <h3 class="font-semibold text-dark mb-4">联系方式</h3>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-center"><i class="fa fa-envelope text-primary mr-3 w-5"></i>pj20211105@163.com</li>
-          <li class="flex items-center"><i class="fa fa-wechat text-primary mr-3 w-5"></i>你的微信ID</li>
-          <li class="flex items-center"><i class="fa fa-phone text-primary mr-3 w-5"></i>+86 xxx xxxx xxxx</li>
-          <li class="flex items-center"><i class="fa fa-globe text-primary mr-3 w-5"></i>智利Bío-Bío康塞普西翁</li>
-        </ul>
-        <div class="mt-6 flex space-x-4">
-          <a href="#" class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="#" class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="#" class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
-            <i class="fa fa-instagram"></i>
-          </a>
+        <div class="hero-meta" aria-label="基本信息">
+          <div class="meta-item"><span class="meta-label">当前身份</span><span class="meta-value">国际中文教师志愿者</span></div>
+          <div class="meta-item"><span class="meta-label">语言能力</span><span class="meta-value">西班牙语约B1</span></div>
+          <div class="meta-item"><span class="meta-label">求职意向</span><span class="meta-value">运营支持 · 沟通执行</span></div>
+          <div class="meta-item"><span class="meta-label">计划到岗</span><span class="meta-value">2027年3月</span></div>
         </div>
       </div>
-      <div>
-        <h3 class="font-semibold text-dark mb-4">发送消息</h3>
-        <form class="space-y-4">
-          <input type="text" placeholder="你的姓名" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
-          <input type="email" placeholder="你的邮箱" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm" />
-          <textarea rows="4" placeholder="你的留言" class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"></textarea>
-          <button type="submit" class="px-5 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">发送消息</button>
-        </form>
+      <aside class="hero-aside" aria-label="我的工作方式">
+        <p class="aside-kicker">HOW I WORK <span aria-hidden="true">↘</span></p>
+        <h2>把信息整理清楚，<br>把具体工作落实。</h2>
+        <div class="workflow">
+          <div class="workflow-item"><span class="step-num">01</span><div><p class="workflow-title">了解对象与需求</p><p class="workflow-desc">从学生的基础、兴趣与反馈出发。</p></div></div>
+          <div class="workflow-item"><span class="step-num">02</span><div><p class="workflow-title">借助工具准备材料</p><p class="workflow-desc">用AI辅助资料、PPT和素材准备。</p></div></div>
+          <div class="workflow-item"><span class="step-num">03</span><div><p class="workflow-title">沟通、执行、再调整</p><p class="workflow-desc">落实课堂与日常安排，课后复盘。</p></div></div>
+        </div>
+        <p class="aside-foot">从实际做过的事出发，持续学习。</p>
+      </aside>
+    </section>
+
+    <section class="section container" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading"><div><p class="section-label">01 / CONTRIBUTION</p><h2 class="section-title" id="capabilities-title">核心技能与可承担工作</h2></div><p class="section-note">求职意向基于现有经历，<br>具体职责可与团队沟通。</p></div>
+      <div class="capability-grid">
+        <article class="capability"><span class="capability-number">01</span><h3>资料与课件准备</h3><p>使用AI辅助搜集课程资料、整理内容、制作PPT和教学素材，并根据实际反馈继续修改。</p><div class="tag-list"><span class="tag">资料整理</span><span class="tag">AI辅助</span><span class="tag">PPT制作</span></div></article>
+        <article class="capability"><span class="capability-number">02</span><h3>学员与用户沟通</h3><p>有学生个别沟通与家长反馈经历。能关注不同对象的需求，调整表达、任务难度和内容安排。</p><div class="tag-list"><span class="tag">学员服务</span><span class="tag">反馈跟进</span><span class="tag">跨文化沟通</span></div></article>
+        <article class="capability"><span class="capability-number">03</span><h3>课程与活动执行</h3><p>做过住宿班学生日常安排，参与文化节目编排、彩排与演练，可以配合明确分工落实具体任务。</p><div class="tag-list"><span class="tag">日常协调</span><span class="tag">活动协作</span><span class="tag">执行支持</span></div></article>
       </div>
-    </div>
-  </div>
-</section>
+      <p class="skill-note"><strong>补充技能</strong>　使用剪映完成过简单视频剪辑，有教学文化视频的海外平台发布经历。视频剪辑目前为基础水平。</p>
+    </section>
 
-<footer class="py-8 bg-dark text-white text-center text-sm">
-  <p>© 2026 JINSI | 用 ❤️ 制作</p>
-  <p class="mt-2 text-slate-400">本网站采用HTML+CSS+JS开发，响应式设计，适配各种设备</p>
-</footer>
+    <section class="section container" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="section-label">02 / EXPERIENCE</p><h2 class="section-title" id="experience-title">工作经历</h2></div><p class="section-note">教学、服务与执行中的积累。</p></div>
+      <div class="experience-list">
+        <article class="experience">
+          <div class="experience-date">2025.04 — 至今<span>智利 · 海外志愿服务</span></div>
+          <div class="experience-main">
+            <h3 class="experience-title">国际中文教师志愿者</h3>
+            <p class="experience-org" lang="es">Liceo Multicultural Claudio Flores Soto</p>
+            <p class="experience-sub">参与教育部中外语言交流合作中心相关志愿者项目</p>
+            <ul class="experience-bullets">
+              <li>承担小学及中学生中文教学，内容涵盖HSK1—3级；截至2025年9月工作总结，授课学生约260人。</li>
+              <li>使用AI辅助制作PPT、整理课程资料及教学素材，结合课堂情况开展课后复盘，调整后续教学安排。</li>
+              <li>针对学生基础、兴趣和表达意愿的差异，开展个别沟通，安排分层练习与小组合作。</li>
+              <li>在TikTok、YouTube、Instagram等平台发布教学与文化主题视频；参与校际才艺节，指导舞狮及中国传统舞蹈，配合编排、彩排与演练。</li>
+            </ul>
+            <p class="inline-honor"><span aria-hidden="true">✦</span> 2025年国际中文教育志愿者线上培训 · 优秀学员</p>
+          </div>
+        </article>
+        <article class="experience">
+          <div class="experience-date">2024.07 — 2024.08<br>2025.01 — 2025.02<span>北京 · 两期任职</span></div>
+          <div class="experience-main">
+            <h3 class="experience-title">住宿班主任</h3>
+            <p class="experience-org">新东方北京国际教育培训中心</p>
+            <p class="experience-sub">学员管理与家校沟通</p>
+            <ul class="experience-bullets">
+              <li>负责住宿学生日常学习与生活管理，跟进课程、住宿、就餐及相关安排。</li>
+              <li>与家长沟通学生学习及生活情况，协调处理学生遇到的问题；协助入学考试、学习计划安排与阶段性汇报。</li>
+            </ul>
+            <p class="inline-honor"><span aria-hidden="true">✦</span> 获教务管理部出具的实习证明，综合表现获良好评价</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<script>
-const menuBtn=document.getElementById('menuBtn');
-const mobileMenu=document.getElementById('mobileMenu');
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-});
+    <section class="section container" id="practice" aria-labelledby="practice-title">
+      <div class="case-panel">
+        <div class="case-intro"><p class="section-label">A PRACTICAL EXAMPLE</p><h2 class="section-title" id="practice-title">用AI辅助准备，<br>用真实反馈调整。</h2><p>备课与教学调整中的工作实践</p></div>
+        <div class="case-grid">
+          <div class="case-step"><p class="case-step-label">遇到的问题</p><h3>同一套内容，难以兼顾所有学生。</h3><p>学生的基础和兴趣不同，部分学生担心出错、不愿开口，也有学生对课程内容兴趣下降。</p></div>
+          <div class="case-step"><p class="case-step-label">采取的做法</p><h3>先沟通，再准备和调整。</h3><p>通过课后沟通了解困难与兴趣，用AI辅助资料、课件和素材准备；设置基础练习与拓展任务，融入小组合作及学生感兴趣的话题。</p></div>
+          <div class="case-step"><p class="case-step-label">持续跟进</p><h3>观察参与情况，复盘下一次安排。</h3><p>结合课堂表现和个别反馈调整难度、节奏与表达方式，并借助AI辅助提出后续改进建议。</p></div>
+        </div>
+        <p class="case-note">以上根据实际教学经历归纳，呈现多次实践中的工作方式。</p>
+      </div>
+    </section>
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target=document.querySelector(this.getAttribute('href'));
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop-70,
-        behavior: 'smooth'
-      });
-      mobileMenu.classList.add('hidden');
-    }
-  });
-});
+    <section class="section container" id="qingyuan" aria-labelledby="qingyuan-title">
+      <div class="section-heading"><div><p class="section-label">03 / WHY QINGYUAN</p><h2 class="section-title" id="qingyuan-title">关于清源，我的三个回答</h2></div><p class="section-note">基于已接触的产品、社群与业务资料，<br>形成的个人理解。</p></div>
+      <div class="questions">
+        <details class="question" open><summary><span class="question-number">01</span><span class="question-title">我的特点是什么，能做什么？</span><span class="question-icon" aria-hidden="true">+</span></summary><div class="answer"><p>我愿意学习和使用工具，能通过沟通了解具体问题，再根据反馈调整做法。教学中使用AI辅助资料、课件和素材准备，服务学生时关注基础、兴趣与表达意愿，也有家长沟通和活动协作经历。</p><p>希望先承担资料整理、AI辅助内容制作、用户沟通和执行支持等工作，通过持续交付逐步承担更多责任。</p></div></details>
+        <details class="question"><summary><span class="question-number">02</span><span class="question-title">我理解清源公司想做什么？</span><span class="question-icon" aria-hidden="true">+</span></summary><div class="answer"><p>我理解清源把研究判断、内容与IP、社群信任和具体业务连接起来：发现需求、建立联系，再把认知与资源转化为服务和项目，积累收入、经验与经营性资产。</p><p>更长远地看，我从相关材料中理解到资本和政治资源、社会影响力的持续积累。这几项可以并行推进，也是我希望在交流中进一步理解的方向。</p></div></details>
+        <details class="question"><summary><span class="question-number">03</span><span class="question-title">我理解负责人追求的是什么？</span><span class="question-icon" aria-hidden="true">+</span></summary><div class="answer"><p>我将相关材料中向“第三阶段”进发的讨论，理解为对资本、可信合作网络以及社会和政治影响力长期积累与延续的追求。这个理解仍需要在交流中校准。</p><p>对我而言，理解长期方向后，要落实到具体工作：认真完成任务，对共同目标负责，及时反馈问题，持续复盘改进，以可靠的工作建立信任。</p></div></details>
+      </div>
+      <p class="reading-note">以上是我的学习理解与求职表达，欢迎在沟通中进一步交流。</p>
+    </section>
 
-window.addEventListener('scroll', () => {
-  const header=document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.classList.add('shadow');
-  } else {
-    header.classList.remove('shadow');
-  }
-});
-</script>
+    <section class="section container learning" id="learning" aria-labelledby="learning-title">
+      <div class="learning-copy"><p class="section-label">LONG-TERM INTEREST</p><h2 class="section-title" id="learning-title">把长期关注，<br>转化为实际参与。</h2><p>我持续关注陈杰森及清源的内容，购买过多款知识导图、会员直播及公司注册与经营实战相关课程。这些接触让我希望进一步理解清源业务，也形成了加入团队的意愿。</p><p class="commitment">我重视长期合作与信任，希望通过认真履行职责、及时沟通和持续学习，把关注转化为具体贡献。</p></div>
+      <div class="learning-products" aria-label="曾购买接触的产品">
+        <div class="product"><span class="product-number">01</span><div><h3 class="product-name">知识导图</h3><p class="product-desc">接触政策、产业与商业内容的表达方式。</p></div></div>
+        <div class="product"><span class="product-number">02</span><div><h3 class="product-name">会员直播</h3><p class="product-desc">持续关注业务实践与相关讨论。</p></div></div>
+        <div class="product"><span class="product-number">03</span><div><h3 class="product-name">公司注册与经营实战课</h3><p class="product-desc">进一步了解企业经营中的具体问题。</p></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="education" aria-labelledby="education-title">
+      <div class="section-heading"><div><p class="section-label">04 / EDUCATION</p><h2 class="section-title" id="education-title">教育与语言</h2></div></div>
+      <div class="education-row"><div><h3 class="education-title">河北外国语学院</h3><p class="education-detail">西班牙语专业 · 本科</p></div><p class="education-date">2021.09 — 2025.06</p></div>
+      <div class="language-row"><span>汉语 · 母语</span><span>西班牙语 · 约B1</span><span>在智利开展中文教学与日常沟通</span></div>
+    </section>
+
+    <section class="section container" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div class="contact-copy"><p class="section-label">LET'S TALK</p><h2 class="section-title" id="contact-title">从一项具体工作，<br>开始了解彼此。</h2><p>愿意结合团队需求沟通职责与安排。<br>目前在智利任教，计划2027年3月到岗，具体日期可沟通。</p><a class="email-text" href="mailto:pj20211105@163.com">pj20211105@163.com</a></div>
+        <div class="contact-actions"><a class="button button-primary" href="mailto:pj20211105@163.com?subject=%E6%B8%85%E6%BA%90%E6%B1%82%E8%81%8C%E6%B2%9F%E9%80%9A">发送邮件 <span aria-hidden="true">↗</span></a><button class="button button-secondary" id="copy-email" type="button" data-email="pj20211105@163.com">复制邮箱</button><p class="contact-note">求职方向：资料整理、用户沟通、运营与执行支持。</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 裴锦涛 · JINSI</p><div class="footer-links"><span>以真实经历为基础，持续学习与改进。</span><a href="#top">返回顶部 ↑</a></div></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>
