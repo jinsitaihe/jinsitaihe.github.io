@@ -176,7 +176,7 @@ strong { color: var(--ink); font-weight: 650; }
 .profile-heading { display: flex; align-items: center; gap: 24px; min-width: 0; }
 .profile-heading > div { min-width: 0; }
 .portrait { display: block; flex: 0 0 90px; width: 90px; height: 120px; aspect-ratio: 3 / 4; object-fit: cover; object-position: center; border: 1px solid #dce3eb; border-radius: 4px; background: #fff; }
-.availability { margin: 11px 0 0; color: var(--text); font-size: 12px; line-height: 1.75; }
+.profile-subtitle { margin: 11px 0 0; color: var(--text); font-size: 12px; line-height: 1.75; }
 .hero h1, .hero .name { color: var(--ink); font-size: 48px; font-weight: 700; letter-spacing: -.045em; line-height: 1.2; }
 .name > span { display: inline-block; margin-left: 15px; color: var(--muted); font-size: 19px; font-weight: 450; letter-spacing: .08em; vertical-align: baseline; }
 .hero-role { max-width: 600px; margin-top: 24px; color: var(--blue); font-size: clamp(32px, 3vw, 38px); font-weight: 600; letter-spacing: -.035em; line-height: 1.55; }
@@ -356,7 +356,7 @@ strong { color: var(--ink); font-weight: 650; }
   .eyebrow { margin-bottom: 20px; font-size: 10px; letter-spacing: .08em; }
   .profile-heading { gap: 18px; }
   .portrait { flex-basis: 72px; width: 72px; height: 96px; border-radius: 3px; }
-  .availability { margin-top: 9px; font-size: 11px; line-height: 1.7; }
+  .profile-subtitle { margin-top: 9px; font-size: 11px; line-height: 1.7; }
   .hero h1, .hero .name { font-size: 43px; line-height: 1.2; }
   .name > span { margin-left: 12px; font-size: 16px; }
   .hero-role { margin-top: 21px; font-size: 32px; line-height: 1.5; letter-spacing: -.035em; }
@@ -453,7 +453,7 @@ strong { color: var(--ink); font-weight: 650; }
   .status-dot { border: 1px solid #333; }
   .profile-heading { gap: 4mm; break-inside: avoid; page-break-inside: avoid; }
   .portrait { flex-basis: 15mm; width: 15mm; height: 20mm; border: 1px solid #bbb; border-radius: 1mm; }
-  .availability { margin-top: 1.5mm; font-size: 7.5pt; line-height: 1.5; }
+  .profile-subtitle { margin-top: 1.5mm; font-size: 7.5pt; line-height: 1.5; }
   .hero h1, .hero .name { font-size: 28pt; letter-spacing: -.03em; line-height: 1.1; }
   .name > span { margin-left: 3mm; font-size: 10pt; }
   .hero-role { max-width: none; margin-top: 2mm; font-size: 12pt; line-height: 1.45; }
