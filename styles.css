@@ -1,4 +1,4 @@
-/* JINSI — personal resume. Buildless, system-font, responsive and print-ready. */
+/* Personal resume. Buildless, system-font, responsive and print-ready. */
 :root {
   color-scheme: light;
   --paper: #f8f9f6;
@@ -181,6 +181,14 @@ strong { color: var(--ink); font-weight: 650; }
 .name > span { display: inline-block; margin-left: 15px; color: var(--muted); font-size: 19px; font-weight: 450; letter-spacing: .08em; vertical-align: baseline; }
 .hero-role { max-width: 600px; margin-top: 24px; color: var(--blue); font-size: clamp(32px, 3vw, 38px); font-weight: 600; letter-spacing: -.035em; line-height: 1.55; }
 .hero-intro { max-width: 590px; margin-top: 20px; color: #59697c; font-size: 15px; line-height: 2; }
+.hero-highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; margin-top: 22px; padding-block: 17px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hero-highlight { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+.hero-highlight strong { color: var(--blue); font-size: 20px; font-weight: 650; line-height: 1.5; }
+.hero-highlight span { color: var(--muted); font-size: 11px; line-height: 1.8; }
+.hero-highlight:hover strong, .hero-highlight:hover span { color: var(--blue-dark); }
+.hero-interest { margin: 15px 0 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.hero-interest a { display: inline-block; margin-left: 4px; text-underline-offset: 3px; }
+.hero-interest a:hover { text-decoration: underline; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 30px; }
 .hero-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 16px; margin-top: 34px; padding-top: 23px; border-top: 1px solid var(--line); }
 .meta-item { display: flex; min-width: 0; flex-direction: column; gap: 5px; }
@@ -361,7 +369,12 @@ strong { color: var(--ink); font-weight: 650; }
   .name > span { margin-left: 12px; font-size: 16px; }
   .hero-role { margin-top: 21px; font-size: 32px; line-height: 1.5; letter-spacing: -.035em; }
   .hero-intro { margin-top: 17px; font-size: 14px; line-height: 2; }
-  .hero-actions { gap: 10px; margin-top: 24px; }
+  .hero-highlights { gap: 10px; margin-top: 18px; padding-block: 13px; }
+  .hero-highlight strong { font-size: 17px; }
+  .hero-highlight span { font-size: 10px; }
+  .hero-interest { margin-top: 13px; font-size: 11px; }
+  .hero-interest a { margin-left: 0; }
+  .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 24px; }
   .hero-actions .button { min-height: 44px; padding-inline: 16px; font-size: 12px; }
   .hero-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 18px; margin-top: 27px; padding-top: 20px; }
   .meta-label { font-size: 10px; }
@@ -444,7 +457,7 @@ strong { color: var(--ink); font-weight: 650; }
   *, *::before, *::after { color: #111 !important; background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
   html { scroll-padding: 0; font-size: 9pt; }
   body { margin: 0; color: #111; background: #fff; font-size: 9pt; line-height: 1.5; -webkit-print-color-adjust: economy; print-color-adjust: economy; }
-  .site-header, .desktop-nav, .mobile-nav, .header-actions, .menu-toggle, .button, .hero-actions, .hero-aside, .learning, .questions, .case-panel, .reading-note, .site-footer, .toast, .print-hidden, #qingyuan, #learning, #practice { display: none !important; }
+  .site-header, .desktop-nav, .mobile-nav, .header-actions, .menu-toggle, .button, .hero-actions, .hero-aside, .hero-highlights, .hero-interest, .learning, .questions, .case-panel, .reading-note, .site-footer, .toast, .print-hidden, #qingyuan, #learning, #practice { display: none !important; }
   .print-only { display: block !important; }
   .container { width: 100%; max-width: none; margin: 0; }
   main { display: block; padding: 0; }
