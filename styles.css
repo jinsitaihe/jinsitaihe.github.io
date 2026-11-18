@@ -258,6 +258,9 @@ strong { color: var(--ink); font-weight: 650; }
 .question[open] .question-icon { transform: rotate(45deg); }
 .answer { max-width: 850px; margin-left: 44px; padding: 0 37px 25px 0; color: #56667b; font-size: 14px; line-height: 2; }
 .answer p + p { margin-top: 12px; }
+.stage-list { margin: 16px 0; padding-left: 1.3em; }
+.stage-list li { margin: 8px 0; }
+.stage-list strong { color: var(--ink); }
 .reading-note { margin-top: 25px; padding: 12px 16px; border-left: 2px solid #a3b9da; color: var(--muted); font-size: 12px; line-height: 1.95; }
 
 .learning { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
