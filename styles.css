@@ -520,3 +520,7 @@ strong { color: var(--ink); font-weight: 650; }
 
 .contact-panel .contact-phone { margin-top: 8px; color: #dbe7f5; }
 .contact-phone a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Work experience separation */
+@media screen { #experience .experience + .experience { padding-top: 44px; } }
+@media screen and (max-width: 700px) { #experience .experience + .experience { padding-top: 34px; } }
